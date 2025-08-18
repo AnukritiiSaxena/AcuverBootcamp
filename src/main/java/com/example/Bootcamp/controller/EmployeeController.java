@@ -23,4 +23,11 @@ public class EmployeeController {
     public List<Employee> getEmployees() {
         return employeeRepository.findAll();
     }
+
+    @GetMapping("/name/{name}")
+    public Employee getEmployeeByName(@PathVariable String name) {
+        return employeeRepository.findByName(name)
+                .orElseThrow(() -> new RuntimeException("Employee not found with name: " + name));
+    }
+
 }
