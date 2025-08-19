@@ -1,0 +1,11 @@
+{
+  "namespace": "com.example.avro",
+  "type": "record",
+  "name": "OrderCreatedEvent",
+  "fields": [
+    {"name": "orderId", "type": "string"},
+    {"name": "customerId", "type": "string"},
+    {"name": "orderTotal", "type": "double"},
+    {"name": "createdAt", "type": "string"}
+  ]
+}
